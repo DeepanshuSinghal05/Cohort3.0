@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 5% 2fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "left-nav left-top-center-bottom right-top-center right-top-center right-top-center"
+    "left-nav left-top-center-bottom center center right"
+    "left-nav left-top-center-bottom center-bottom right-bottom right-bottom";
+    gap: 30px;
+    padding: 10px;
+}
+
+.left-nav{
+    background: white;
+    grid-area: left-nav;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-content{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-content h4{
+    font-family: poppins, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #222;
+    transform: rotate(-90deg);
+    cursor: pointer;
+}
+
+.left-top-center-bottom{
+    grid-area: left-top-center-bottom;
+    background-color: #7b78c9;
+    border-radius: 24px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile-image{
+    height: 25%;
+}
+
+.profile-info{
+    padding: 28px;
+}
+
+.profile-info h1{
+    font-size: 56px;
+    font-weight: 500;
+    line-height: 0.95;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.profile-info p{
+    margin-top: 25px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #222;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.right-top-center{
+    background-color: lightcoral;
+    grid-area: right-top-center;
+    background-image: url(https://user-images.githubusercontent.com/520622/80269751-c812b480-86f5-11ea-832c-903987426c24.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.center{
+    position: relative;
+    background-color: lightblue;
+    grid-area: center;
+    background-image: url(https://gratisography.com/wp-content/uploads/2023/06/gratisography-paper-flamingo-free-stock-photo-1170x780.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 24px;
+    overflow: hidden;
+
+}
+
+.play-btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.right{
+    border-radius: 24px;
+    overflow: hidden;
+    grid-area: right;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.top-section{
+    height: 50%;
+    width: 100%;
+    background-color: #B7DFDA;
+    justify-items: center;
+    padding: 24px;
+    
+}
+
+.btm-section{
+    height: 50%;
+    width: 100%;
+    background: #A886D9;
+    justify-items: center;
+    padding: 24px;
+}
+    
+
+.center-bottom{
+    background-color: #6d6c6c;
+    grid-area: center-bottom;
+    background-image: url(./assets/pple_client.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 45%;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat1{
+    color: white;
+    width: 100%;
+    bottom: 22px;
+    position: absolute;
+    text-align: center;
+}
+
+.stat1 h3{
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.right-bottom{
+    grid-area: right-bottom;
+    border-radius: 15px;
+    display: flex;
+}
+
+.img-section{
+    height: 100%;
+    width: 38%;
+    background-image: url(./assets/Apple_logo.png);
+    background-color: #0B0B0B;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+    border-radius: 24px;
+    
+}
+
+.stats2{
+    height: 100%;
+    width: 62%;
+    background: #F2C56B;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-left: 40px;
+}
+.stats2 h1{
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1;
+    font-family: 'Poppins', sans-serif;
+}
+
+.stats2 p{
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.3;
+    font-family: 'Poppins', sans-serif;
+}
