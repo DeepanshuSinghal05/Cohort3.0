@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.parent{
+    background-color: crimson;
+    display: flex;
+    overflow: hidden;
+}
+
+.inner{
+    background-color: lightseagreen;
+    display: flex;
+    
+    animation: loop 5s linear infinite;
+}
+
+h4{
+    color: white;
+    background-color: blue;
+    font-size: 20px;
+    padding: 10px;
+}
+
+
+@keyframes loop {
+    from{
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}

@@ -1,0 +1,532 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+main{
+    min-height: 100vh;
+    width: 100%;
+    background-color: white;
+    padding: 25px 45px;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between  ;
+}
+.section1{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.section1 img{
+    width: 120px;
+    object-fit: cover;
+}
+
+.section1 h4{
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.section2{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.section2 button{
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#btn1{
+    color: black;
+    background-color: transparent;
+    border: none;
+}
+
+#btn2{
+    background-color: black;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 50px;
+    border: none;
+}
+
+.center{
+    width: 100%;
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.center h1{
+    font-size: 72px;
+    line-height: 78px;
+    font-weight: 500;
+    letter-spacing: -2px;
+}
+
+.center p{
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 32px;
+    color: #555;
+}
+
+
+
+.input1{
+    width: 58%;
+    height: 70px;
+    background-color: white;
+    
+    margin-top: 45px;
+    padding: 0 25px;
+
+    border-radius: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.08);
+}
+
+
+.input1 input{
+    width: 70%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+
+.input1 i{
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.input1 .ri-search-line{
+    background-color: #ea4c89;
+    color: white;
+
+    padding: 12px;
+    border-radius: 50%;
+}
+
+
+
+
+.btm-center{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btm-center h4{
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+
+    padding: 10px 18px;
+    border-radius: 50px;
+    background-color: #c9c9c9;
+
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.btm-center h4:first-child{
+    background-color: transparent;
+    border: none;
+    padding-top: 12px;
+    color: black;
+}
+
+.btm-center h4:hover{
+    background-color: white;
+    color: black;
+    border: none;
+}
+
+.card-section{
+    width: 100%;
+    margin-top: 90px;
+}
+
+.card-nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.sec1 button{
+    padding: 12px 18px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    background-color: white;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.sec2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    flex: 1;
+}
+
+.sec2 h3{
+    font-size: 15px;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+
+.sec2 h3:hover{
+    color: black;
+}
+
+.sec2 h3:first-child{
+    color: black;
+    font-weight: 600;
+}
+
+.sec3 button{
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    background-color: white;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.cards{
+    width: 100%;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    gap: 35px;
+}
+
+.card{
+    width: 100%;
+}
+
+.card-image{
+    width: 100%;
+    height: 250px;
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.card-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-image video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.overlay{
+    width: 100%;
+    height: -40%;
+    position: absolute;
+    bottom: -40%;
+    background: linear-gradient(transparent,rgba(0,0,0,0.8));
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding: 20px;
+    transition: all ease 0.3s;
+}
+.card-image:hover .overlay{
+    bottom: 0;
+}
+
+.overlay h4{
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.overlay-icons i{
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.card-bottom{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.left img{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+}
+
+.left h5{
+    font-size: 15px;
+}
+
+.right{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.right h5{
+    color: #666;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+
+.third-btm{
+    width: 100%;
+    margin-top: 80px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 25px;
+}
+
+.third-btm button{
+
+    padding: 16px 32px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all ease 0.3s;
+
+}
+
+.third-btm button:hover{
+    opacity: 0.8;
+}
+
+.third-btm i{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #dcdcdc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+.third-btm i:hover{
+    background-color: black;
+    color: white;
+    border: black;
+}
+
+.loop{
+    width: 100%;
+    margin-top: 100px;
+    padding: 40px 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+    white-space: nowrap;
+}
+
+.loop::before,
+.loop::after{
+    content: "";
+
+    position: absolute;
+    top: 0;
+
+    width: 120px;
+    height: 100%;
+
+    z-index: 2;
+}
+
+.loop::before{
+    left: 0;
+    background: linear-gradient(to right, white, transparent);
+}
+
+.loop::after{
+    right: 0;
+    background: linear-gradient(to left, white, transparent);
+}
+
+
+.inner{
+    display: flex;
+    align-items: center;
+    gap: 90px;
+    animation: scroll 7s linear infinite;
+}
+
+
+
+
+.inner img{
+    height: 42px;
+    width: auto;
+    opacity: 0.7;
+    transition: all ease 0.3s;
+    
+}
+
+
+
+.inner img:hover{
+    opacity: 1;
+    transform: scale(1.08);
+}
+
+@keyframes scroll{
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.btm{
+    width: 100%;
+    margin-top: 100px;
+    padding: 40px 0;
+    border-top: 1px solid #e5e5e5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.part1 img{
+    width: 120px;
+    object-fit: cover;
+}
+
+.part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.part2 h4{
+    font-size: 15px;
+    font-weight: 600;
+    color: #222;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+.part2 h4:hover{
+    color: #ea4c89;
+}
+
+.part3{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.part3 i{
+    font-size: 22px;
+    cursor: pointer;
+    transform: ease all 0.3s;
+}
+
+.part3 i:hover{
+    transform: translateY(-3px);
+    color: #ea4c89;
+}
+
+footer{
+    width: 100%;
+    padding: 30px 0 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+.left-part,
+.right-paart{
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+footer h4{
+    font-size: 14px;
+    font-weight: 500;
+    color: #777;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+
+footer h4:hover{
+    color: black;
+}
