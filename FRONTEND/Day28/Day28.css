@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(31, 30, 30);
+    color: white;
+}
+h1,h2{
+    font-size: 50px;
+}
+
+h1{
+    margin: 50px;
+    margin-left: 30%;
+}
+
+h2{
+    margin: 50px;
+    margin-left: 20%;
+}
+

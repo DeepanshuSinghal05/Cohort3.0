@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(31, 30, 30);
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.bulb{
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+button{
+    padding: 20px 40px;
+    border-radius: 20px;
+    background-color: none;
+}
+
+.lightup{
+    background-color: yellow;
+}
