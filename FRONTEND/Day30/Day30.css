@@ -7,6 +7,29 @@
 html,body{
     height: 100%;
     width: 100%;
-    background-color: rgb(31, 30, 30);
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+
+main{
+    height: 60%;
+    width: 80%;
+    background-color: rgb(103, 100, 100);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    
+}
+
+.box{
+    height: 40%;
+    width: 20%;
+    border-radius: 20px;
+    background-color: red;
+}

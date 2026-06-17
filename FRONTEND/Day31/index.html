@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Card Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background-blur blur-1"></div>
+    <div class="background-blur blur-2"></div>
+
+    <main class="container">
+      <!-- Form Section -->
+      <section class="form-section">
+        <div class="form-card">
+          <h1>User Card Generator</h1>
+          <p class="subtitle">
+            Fill in the details below to generate a professional user profile
+            card.
+          </p>
+
+          <form id="userForm">
+            <div class="input-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" placeholder="Enter your full name" />
+            </div>
+
+            <div class="input-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="Enter your email" />
+            </div>
+
+            <div class="input-group">
+              <label for="image">Image URL</label>
+              <input type="text" id="image" placeholder="Paste image URL" />
+            </div>
+
+            <button type="submit">Generate Card</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Cards Section -->
+      <section class="cards-section">
+        <div class="section-header">
+          <h2>Generated Cards</h2>
+          <span>Your cards will appear here</span>
+        </div>
+
+        <div class="cards-container">
+            
+
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
