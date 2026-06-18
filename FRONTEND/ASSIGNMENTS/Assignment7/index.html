@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Overview</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Task Overview Dashboard</h1>
+
+            <div class="controls">
+
+                <button id="create-task-btn">
+                    + Create New Task
+                </button>
+
+                <select id="filter">
+                    <option value="all">All Tasks</option>
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+
+            </div>
+        </header>
+
+        <main class="board">
+
+            <!-- EASY -->
+            <section class="column easy">
+                <div class="column-header">
+                    <h2>Easy</h2>
+                    <span class="count">0</span>
+                </div>
+
+                <div class="task-container easy-tasks">
+
+
+                </div>
+            </section>
+
+            <!-- MEDIUM -->
+            <section class="column medium">
+                <div class="column-header">
+                    <h2>Medium</h2>
+                    <span class="count">0</span>
+                </div>
+
+                <div class="task-container medium-tasks">
+
+                </div>
+            </section>
+
+            <!-- HARD -->
+            <section class="column hard">
+                <div class="column-header">
+                    <h2>Hard</h2>
+                    <span class="count">0</span>
+                </div>
+
+                <div class="task-container hard-tasks">
+
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
