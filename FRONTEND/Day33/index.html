@@ -3,9 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>E-Comm Dashboard</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+    <main>
+
+        <nav>
+
+            <div class="logo-section">
+                <h1>E-Comm Dashboard</h1>
+                <p>Manage your products efficiently</p>
+            </div>
+
+            <button id="create-product">
+                + Create Product
+            </button>
+
+        </nav>
+
+        <section class="products">
+
+            <!-- Dynamic Product Cards Here -->
+
+        </section>
+
+        <!-- Product Modal -->
+
+        <div class="form">
+
+            <form>
+
+                <div class="form-header">
+
+                    <h2>Create Product</h2>
+
+                    <span id="close">&times;</span>
+
+                </div>
+
+                <p class="subtitle">
+                    Fill in the product details below
+                </p>
+
+                <input
+                    type="text"
+                    placeholder="Product Name"
+                >
+
+                <input
+                    type="text"
+                    placeholder="Product Description"
+                >
+
+                <input
+                    type="number"
+                    placeholder="Product Price"
+                >
+
+                <input
+                    type="url"
+                    placeholder="Product Image URL"
+                >
+
+                <button id="create-btn">
+                    Create Product
+                </button>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
