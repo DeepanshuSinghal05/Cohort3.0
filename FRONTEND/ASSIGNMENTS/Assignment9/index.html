@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-shell">
+        <aside class="sidebar">
+
+            <div class="brand">
+                <span class="brand-mark">◆</span>
+                <div>
+                    <h1>Flowspace</h1>
+                    <p>Personal Productivity</p>
+                </div>
+            </div>
+
+            <nav class="nav-links">
+                <a href="#" class="nav-link active" data-view="home"><span>🏠</span> Overview</a>
+                <a href="#" class="nav-link" data-view="todo"><span>📝</span> Todo List</a>
+                <a href="#" class="nav-link" data-view="planner"><span>🗓️</span> Daily Planner</a>
+                <a href="#" class="nav-link" data-view="motivation"><span>💬</span> Motivation</a>
+                <a href="#" class="nav-link" data-view="pomodoro"><span>⏱️</span> Pomodoro Timer</a>
+                <a href="#" class="nav-link" data-view="goals"><span>🎯</span> Daily Goals</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>🌙 Dark Mode</span>
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+        </aside>
+
+        <main class="main-content">
+
+            <header class="topbar">
+
+                <div class="topbar-title">
+                    <h2 id="page-title">Overview</h2>
+                    <p id="page-subtitle">Here's how your day is shaping up</p>
+                </div>
+
+                <div class="topbar-widgets">
+
+                    <div class="widget clock-widget">
+                        <span class="widget-icon">🕐</span>
+                        <div>
+                            <p class="widget-main" id="time-now">--:--:--</p>
+                            <p class="widget-sub" id="date-now">Loading date...</p>
+                        </div>
+                    </div>
+
+                    <div class="widget" id="weather-widget">
+                        <span class="widget-icon" id="weather-icon">⛅</span>
+                        <div>
+                            <p class="widget-main" id="weather-temp">--°C</p>
+                            <p class="widget-sub" id="weather-desc">Loading weather...</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </header>
+
+            <section class="view active" id="home-view">
+
+                <div class="bento-grid">
+
+                    <div class="bento-card welcome-card">
+                        <p class="eyebrow">Welcome back</p>
+                        <h3>Let's make today count</h3>
+                        <div class="mini-stats">
+                            <div>
+                                <p class="mini-stat-value" id="pending-todos">0</p>
+                                <p class="mini-stat-label">Tasks pending</p>
+                            </div>
+                            <div>
+                                <p class="mini-stat-value" id="goals-done">0/0</p>
+                                <p class="mini-stat-label">Goals completed</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bento-card feature-card" data-view="todo">
+                        <span class="card-icon icon-blue">📝</span>
+                        <h3>Todo List</h3>
+                        <p>Manage your daily tasks</p>
+                        <span class="card-arrow">→</span>
+                    </div>
+
+                    <div class="bento-card feature-card" data-view="planner">
+                        <span class="card-icon icon-purple">🗓️</span>
+                        <h3>Daily Planner</h3>
+                        <p>Plan your day hour by hour</p>
+                        <span class="card-arrow">→</span>
+                    </div>
+
+                    <div class="bento-card feature-card" data-view="motivation">
+                        <span class="card-icon icon-amber">💬</span>
+                        <h3>Motivation</h3>
+                        <p>Get an inspiring quote</p>
+                        <span class="card-arrow">→</span>
+                    </div>
+
+                    <div class="bento-card feature-card" data-view="pomodoro">
+                        <span class="card-icon icon-red">⏱️</span>
+                        <h3>Pomodoro Timer</h3>
+                        <p>Stay focused in sessions</p>
+                        <span class="card-arrow">→</span>
+                    </div>
+
+                    <div class="bento-card feature-card" data-view="goals">
+                        <span class="card-icon icon-green">🎯</span>
+                        <h3>Daily Goals</h3>
+                        <p>Track today's wins</p>
+                        <span class="card-arrow">→</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="view" id="todo-view">
+                <div class="panel">
+
+                    <button class="back-btn" data-view="home">← Back to Overview</button>
+
+                    <div class="input-row">
+                        <input type="text" id="todo-input" placeholder="Add a new task...">
+                        <button id="add-todo-btn">Add Task</button>
+                    </div>
+
+                    <ul class="item-list" id="todo-list"></ul>
+                </div>
+            </section>
+
+            <section class="view" id="planner-view">
+                <div class="panel">
+
+                    <button class="back-btn" data-view="home">← Back to Overview</button>
+
+                    <div class="planner-scroll" id="planner-slots"></div>
+                </div>
+            </section>
+
+            <section class="view" id="motivation-view">
+                <div class="panel">
+
+                    <button class="back-btn" data-view="home">← Back to Overview</button>
+
+                    <div class="quote-card">
+                        <span class="quote-mark">“</span>
+                        <p id="quote-text">Loading a quote for you...</p>
+                        <p id="quote-author"></p>
+                        <button id="new-quote-btn">New Quote</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="view" id="pomodoro-view">
+                <div class="panel">
+
+                    <button class="back-btn" data-view="home">← Back to Overview</button>
+
+                    <div class="pomodoro-card">
+                        <p id="session-label">Work Session</p>
+
+                        <div class="timer-ring" id="timer-ring">
+                            <h1 id="timer-display">25:00</h1>
+                        </div>
+
+                        <div class="timer-controls">
+                            <button id="start-btn">Start</button>
+                            <button id="pause-btn">Pause</button>
+                            <button id="reset-btn">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="view" id="goals-view">
+                <div class="panel">
+
+                    <button class="back-btn" data-view="home">← Back to Overview</button>
+
+                    <div class="input-row">
+                        <input type="text" id="goal-input" placeholder="Add a new goal...">
+                        <button id="add-goal-btn">Add Goal</button>
+                    </div>
+
+                    <div class="progress-bar-track">
+                        <div class="progress-bar-fill" id="goal-progress-fill"></div>
+                    </div>
+                    <p id="goal-progress">0 of 0 completed</p>
+
+                    <ul class="item-list" id="goal-list"></ul>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
